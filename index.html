@@ -2,12 +2,34 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Hello World!</title>
+    <title>Beth Radio</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+
   </head>
   <body>
     <h1>Hello World!</h1>
     We are using node <script>document.write(process.versions.node)</script>,
     Chromium <script>document.write(process.versions.chrome)</script>,
     and Electron <script>document.write(process.versions.electron)</script>.
+<br><div>Music Player
+
+<div class="lft-radio">
+  <i class="fa fa-chevron-circle-up" style="font-size: 300%"></i>
+  <i class="fa fa-pause-circle" style="font-size: 300%"></i>
+  <i class="fa fa-chevron-circle-down" style="font-size: 300%"></i>
+  <audio src="http://75.102.43.194:80/kwmu1" type="audio/mpeg" autoplay>
+	Something's really wrong! - audio didnt load</audio>
+
+
+<script>
+// mp3 = new Audio('file:///home/pi/t.mp3');
+// mp3 = new Audio('http://75.102.43.194:80/kwmu1');
+// mp3.autoplay = true;
+// mp3.muted = false;
+</script>
+</div>
+
+
   </body>
 </html>

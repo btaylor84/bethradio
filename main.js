@@ -12,7 +12,7 @@ let mainWindow;
 
 function createWindow () {
   // Create the browser window.
-  mainWindow = new BrowserWindow({width: 800, height: 600});
+  mainWindow = new BrowserWindow({width: 760, height: 440, frame: false});
 
   // and load the index.html of the app.
   mainWindow.loadURL('file://' + __dirname + '/index.html');
@@ -28,6 +28,11 @@ function createWindow () {
     mainWindow = null;
   });
 }
+
+
+// ideally, we would control the player from the index.html screen,
+// passing messages back here to implement player functions such as
+// volume control, pausing, etc.
 
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
