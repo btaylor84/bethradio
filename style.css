@@ -1,0 +1,12 @@
+div.lft-radio {
+    position: absolute;
+    width: 160px;
+    height: 200px;
+}
+
+i.radio {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%,0);
+    font-size: 600%;    
+}
