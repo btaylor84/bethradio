@@ -23,7 +23,7 @@
   },
   "homepage": "https://github.com/electron/electron-quick-start#readme",
   "devDependencies": {
-    "electron-prebuilt": "^0.37.0"
+    "electron-prebuilt": "^0.37.7"
   },
   "dependencies": {
     "musicplayer-api": "^0.2.0"
