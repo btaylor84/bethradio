@@ -8,19 +8,18 @@
     <link rel="stylesheet" href="style.css">
   </head>
 
-  <body onLoad=startclock()>
+  <body>
 <!--    <h1>Hello World!</h1>
     We are using node <script>document.write(process.versions.node)</script>,
     Chromium <script>document.write(process.versions.chrome)</script>,
     and Electron <script>document.write(process.versions.electron)</script>.
 -->
-<script src=radioface.js></script>
 
 <div class="Music-Player">
 <div class="lft-radio">
-  <div class="radio fa fa-chevron-circle-up" ></div>
-  <div class="radio fa fa-pause-circle" ></div>
-  <div class="radio fa fa-chevron-circle-down" ></i>
+  <div id="volup" class="radio fa fa-chevron-circle-up" ></div>
+  <div id="pause-play" class="radio fa fa-pause-circle" ></div>
+  <div id="voldn" class="radio fa fa-chevron-circle-down" ></div>
   <audio id="player" src="http://75.102.43.194:80/kwmu1-nopreroll" type="audio/mpeg" autoplay>
 	Something's really wrong! - audio didnt load</audio>
 </div>
@@ -32,6 +31,7 @@
 <script type='text/javascript'>
 new embedAnimaClock("myAnimaClockDiv53912", width=400, height=100, mrcl_kk_ghost, is24hr = 0, updateInterval = 25, setTitle = false);
 </script>
+<script src="interface.js"> startup(); </script>
 
 </div>
   </body>
