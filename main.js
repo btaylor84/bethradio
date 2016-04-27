@@ -12,13 +12,13 @@ let mainWindow;
 
 function createWindow () {
   // Create the browser window.
-  mainWindow = new BrowserWindow({width: 760, height: 440, frame: true});
+  mainWindow = new BrowserWindow({width: 760, height: 800, frame: true});
 
   // and load the index.html of the app.
   mainWindow.loadURL('file://' + __dirname + '/index.html');
 
   // Open the DevTools. or not -- BT
-  // mainWindow.webContents.openDevTools();
+  mainWindow.webContents.openDevTools();
 
   // Emitted when the window is closed.
   mainWindow.on('closed', function() {
@@ -30,9 +30,6 @@ function createWindow () {
 }
 
 
-// ideally, we would control the player from the index.html screen,
-// passing messages back here to implement player functions such as
-// volume control, pausing, etc.
 
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
