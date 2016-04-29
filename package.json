@@ -26,7 +26,12 @@
     "electron-prebuilt": "^0.37.7"
   },
   "dependencies": {
+    "cheerio": "^0.20.0",
+    "dev-null": "^0.1.1",
+    "icy": "^2.1.0",
     "lodash": "^4.11.1",
-    "musicplayer-api": "^0.2.0"
+    "musicplayer-api": "^0.2.0",
+    "request": "^2.72.0",
+    "vue": "^1.0.21"
   }
 }

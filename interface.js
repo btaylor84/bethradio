@@ -2,6 +2,8 @@
 
 window.$ = window.jQuery = require('./jquery-2.2.3.js');
 var _ = require('lodash');
+var intIdup; // used as the timer identifier for various touch events
+var intIddn; // seperate timer to allow conflicting touches to work
 
 function startup() {
     // the middle button, pause-play, is a toggle to mute/stop the stream
@@ -23,6 +25,14 @@ function startup() {
     el.addEventListener("click", voldnHandleClick, false);
     el.addEventListener("touchstart", voldnHandleStart, false);
     el.addEventListener("touchend", voldnHandleEnd, false);
+    
+    // if they click the clock, don't go away from app
+    el = document.getElementsByClassName("clock")[0];
+    el.addEventListener("click",(evt) => evt.preventDefault() , false);
+    
+    // get the metadata, every time it gets loaded
+    //el = document.getElementById("player");
+    //el.addEventListener("loadedmetadata", streamData, false);
 }
 
 function pauseHandleStart (evt) {
@@ -50,10 +60,16 @@ function volupHandleClick (evt) {
 }
 
 function volupHandleStart (evt) {
-    
+    // while the volup is pressed, click up the volume every xxx msec
+    // since that's maxed at 1, shouldnt over-do. 
+    intIdup = setInterval(volupHandleClick(evt), 400);
+    $("#volup").addClass("pressed");    
 }
 
 function volupHandleEnd (evt) {
+    // all done
+    clearInterval(intIdup);
+    $("#volup").removeClass("pressed")
     
 }
 
@@ -66,9 +82,16 @@ function voldnHandleClick (evt) {
 }
 
 function voldnHandleStart (evt) {
-    
+    intIddn = setInterval(voldnHandleClick(evt), 400);
+    $("#voldn").addClass("pressed");    
 }
 
 function voldnHandleEnd (evt) {
-    
+    clearInterval(intIddn);
+    $("#voldn").removeClass("pressed");    
+}
+
+// let's see what this shows. we're hoping ... program title, etc.
+function streamData (evt) {
+    console.log(evt);
 }

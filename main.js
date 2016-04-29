@@ -12,13 +12,16 @@ let mainWindow;
 
 function createWindow () {
   // Create the browser window.
-  mainWindow = new BrowserWindow({width: 760, height: 800, frame: true});
+  mainWindow = new BrowserWindow({width: 760, height: 480, frame: true});
 
   // and load the index.html of the app.
   mainWindow.loadURL('file://' + __dirname + '/index.html');
 
   // Open the DevTools. or not -- BT
-  mainWindow.webContents.openDevTools();
+  //mainWindow.webContents.openDevTools();
+  
+  // where is the console.log?
+  console.log("here I am!");
 
   // Emitted when the window is closed.
   mainWindow.on('closed', function() {
@@ -29,11 +32,11 @@ function createWindow () {
   });
 }
 
-
-
 // This method will be called when Electron has finished
 // initialization and is ready to create browser windows.
 app.on('ready', createWindow);
+
+
 
 // Quit when all windows are closed.
 app.on('window-all-closed', function () {
