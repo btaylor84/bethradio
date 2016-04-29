@@ -1,6 +1,5 @@
 'use strict;'
 
-window.$ = window.jQuery = require('./jquery-2.2.3.js');
 var _ = require('lodash');
 var intIdup; // used as the timer identifier for various touch events
 var intIddn; // seperate timer to allow conflicting touches to work
@@ -30,19 +29,21 @@ function startup() {
     el = document.getElementsByClassName("clock")[0];
     el.addEventListener("click",(evt) => evt.preventDefault() , false);
     
-    // get the metadata, every time it gets loaded
-    //el = document.getElementById("player");
-    //el.addEventListener("loadedmetadata", streamData, false);
 }
 
 function pauseHandleStart (evt) {
     let player = document.getElementById("player");
+    let el = document.getElementById("pause-play");
     evt.preventDefault();
-    if ( $("#pause-play").hasClass("fa-pause-circle") ) {
-        $("#pause-play").toggleClass("fa-pause-circle fa-play-circle");
+    if (el.classList.contains("fa-pause-circle") ) {
+        el.classList.add("fa-play-circle");
+        el.classList.remove("fa-pause-circle");
+        //$("#pause-play").toggleClass("fa-pause-circle fa-play-circle");
         player.pause();
     } else {
-        $("#pause-play").toggleClass("fa-play-circle fa-pause-circle");
+        //$("#pause-play").toggleClass("fa-play-circle fa-pause-circle");
+        el.classList.add("fa-pause-circle");
+        el.classList.remove("fa-play-circle");
         player.play();
     }  
 }
@@ -63,13 +64,15 @@ function volupHandleStart (evt) {
     // while the volup is pressed, click up the volume every xxx msec
     // since that's maxed at 1, shouldnt over-do. 
     intIdup = setInterval(volupHandleClick(evt), 400);
-    $("#volup").addClass("pressed");    
+    let el = document.getElementById("#volup");
+    el.classNames += "pressed";
 }
 
 function volupHandleEnd (evt) {
     // all done
     clearInterval(intIdup);
-    $("#volup").removeClass("pressed")
+    let el = document.getElementById("#volup");
+    el.classNames -= "pressed";
     
 }
 
@@ -83,15 +86,14 @@ function voldnHandleClick (evt) {
 
 function voldnHandleStart (evt) {
     intIddn = setInterval(voldnHandleClick(evt), 400);
-    $("#voldn").addClass("pressed");    
+    let el = document.getElementById("#voldn");
+    el.classNames += "pressed";
 }
 
 function voldnHandleEnd (evt) {
     clearInterval(intIddn);
-    $("#voldn").removeClass("pressed");    
+    let el = document.getElementById("#voldn");
+    el.classNames -= "pressed";
 }
 
-// let's see what this shows. we're hoping ... program title, etc.
-function streamData (evt) {
-    console.log(evt);
-}
+startup();

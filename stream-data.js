@@ -40,9 +40,9 @@ icy.get(url, function(res) {
 console.log('meta done');
 */
 
-const request = require('request');
-const url = 'https://api.composer.nprstations.org/v1/widget/5182a93be1c876c6464716bd/now?format=json';
-const Vue = require('vue');
+var request = require('request');
+var url = 'https://api.composer.nprstations.org/v1/widget/5182a93be1c876c6464716bd/now?format=json';
+var Vue = require('vue');
 
 request(url, function(error, response, body) {
     if (!error) {

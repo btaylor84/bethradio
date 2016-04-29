@@ -28,6 +28,7 @@
   "dependencies": {
     "cheerio": "^0.20.0",
     "dev-null": "^0.1.1",
+    "forecast.io": "0.0.9",
     "icy": "^2.1.0",
     "lodash": "^4.11.1",
     "musicplayer-api": "^0.2.0",
