@@ -4,10 +4,13 @@ accent color   #d35147 #cc6633
 white
 tinted dark grey #5d636a #666666
 tinted light grey #bac6cd #cccccc
+complementary yellow #ecc422
 
 */
 
-
+p {
+    margin: 0 0 0 0;
+}
 
 div.lft-radio {
     position: absolute;
@@ -51,10 +54,87 @@ div#on-next {
 
 div.clock {
     position: absolute;
-    left: 160px;
+    left: 140px;
     top: 0 px;
 }
 
 pressed {
     color: #d35147;
+}
+
+div.weather {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+div#current {
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    flex-wrap: wrap;
+    left: 480px;
+    top: 12px;
+    width: 220px;
+}
+
+div#now {
+    position: absolute;
+    left: 260px;
+    top: 100px;
+    width: 180px;
+    height: 100px;
+}
+
+canvas#icon {
+    position: relative;
+}
+
+span.temp {
+    position: relative;
+    text-align: right;
+    color: #336699;
+    font-size: 48px;
+    top: -20px;
+}
+
+p#summary, p#nextHour, p#nextDay {
+    position: relative;
+    font-size: 18px;
+    color: #59636a;
+}
+
+div#week {
+    position: absolute;
+    left: 200px;
+    top:  200px;
+    width: 600px;
+}
+
+p#summary {
+    font-size: 24px;
+}
+
+table#weekTable {
+    
+}
+
+div#weeklines {
+    position: relative;
+    height: 32px;
+}
+
+span#dayName, span#daySumm, span#hiTemp, span#loTemp {
+    color: #336699;
+    font-size: 18px;
+}
+
+span#arrow {
+    color: #d35147;
+    font-size: 24px;
+}
+
+canvas.daycons {
+    top: 6px;
 }

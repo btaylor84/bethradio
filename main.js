@@ -12,16 +12,16 @@ let mainWindow;
 
 function createWindow () {
   // Create the browser window.
-  mainWindow = new BrowserWindow({width: 760, height: 800, frame: true});
+  mainWindow = new BrowserWindow({width: 760, height: 460, frame: false});
 
   // and load the index.html of the app.
   mainWindow.loadURL('file://' + __dirname + '/index.html');
 
   // Open the DevTools. or not -- BT
-  mainWindow.webContents.openDevTools();
+  //mainWindow.webContents.openDevTools();
   
   // where is the console.log?
-  console.log("here I am!");
+  //console.log("here I am!");
 
   // Emitted when the window is closed.
   mainWindow.on('closed', function() {
