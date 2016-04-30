@@ -2,7 +2,7 @@
 
 const local_lat = '38.6337567';
 const local_lng = '-90.374482';
-const APIKey = 'cefd4b691530a7717e1320c049d10b30';
+const APIKey = config.APIKey;       // key from forecast.io
 
 var Forecast = require('forecast.io');
 var request = require('request');
@@ -29,10 +29,6 @@ var daycons = new Skycons({
 for (var day = 0; day < 7; day++) {
     daycons.add(`icon-${dayNames[day]}`);
 }
-
-var options = {
-    APIKey: 'cefd4b691530a7717e1320c049d10b30',
-};
 
 var wvm = new Vue({
     el: '.weather',

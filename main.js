@@ -1,5 +1,8 @@
 'use strict';
 
+// get all the config data
+var config = require("./config");
+
 const electron = require('electron');
 // Module to control application life.
 const app = electron.app;

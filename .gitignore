@@ -2,3 +2,4 @@ node_modules
 npm-debug.log
 jquery-2.2.3.js
 jquery-2.2.3.min.js
+config.js
