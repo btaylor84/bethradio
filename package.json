@@ -1,37 +1,30 @@
 {
-  "name": "electron-quick-start",
-  "version": "1.0.0",
-  "description": "A minimal Electron application",
+  "name": "bethradio",
+  "version": "0.1.0",
+  "description": "electron app targeted to the Rpi",
   "main": "main.js",
   "scripts": {
     "start": "electron main.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/electron/electron-quick-start.git"
+    "url": "git+https://github.com/btaylor/bethradio"
   },
   "keywords": [
     "Electron",
-    "quick",
-    "start",
-    "tutorial"
-  ],
-  "author": "GitHub",
-  "license": "CC0-1.0",
+      ],
+  "author": "Bob Taylor",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/electron/electron-quick-start/issues"
+    "url": "https://github.com/btaylor84/bethradio/issues"
   },
-  "homepage": "https://github.com/electron/electron-quick-start#readme",
+  "homepage": "https://github.com/btaylor84/bethradio#readme",
   "devDependencies": {
     "electron-prebuilt": "^0.37.7"
   },
   "dependencies": {
-    "cheerio": "^0.20.0",
-    "dev-null": "^0.1.1",
     "forecast.io": "0.0.9",
-    "icy": "^2.1.0",
     "lodash": "^4.11.1",
-    "musicplayer-api": "^0.2.0",
     "request": "^2.72.0",
     "vue": "^1.0.21"
   }
