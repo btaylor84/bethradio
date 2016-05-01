@@ -1,5 +1,7 @@
 'use strict';
 
+var config = require("./config");
+
 const local_lat = '38.6337567';
 const local_lng = '-90.374482';
 const APIKey = config.APIKey;       // key from forecast.io

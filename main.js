@@ -24,7 +24,7 @@ function createWindow () {
   //mainWindow.webContents.openDevTools();
   
   // where is the console.log?
-  //console.log("here I am!");
+  console.log("here I am!");
 
   // Emitted when the window is closed.
   mainWindow.on('closed', function() {
