@@ -75,8 +75,8 @@ div#current {
     align-items: center;
     flex-wrap: wrap;
     left: 480px;
+    width: 320px;
     top: 12px;
-    width: 220px;
 }
 
 div#now {
