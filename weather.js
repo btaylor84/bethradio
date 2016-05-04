@@ -98,9 +98,9 @@ function setWeatherData () {
             skycons.set("icon",body.currently.icon); 
             
             // make those canvases dance
-                skycons.play();
-                daycons.play();
-            
+            //    skycons.play();
+            //    daycons.play();
+            // commented out for possible improvement of resources
         }    
     );
 }
@@ -113,4 +113,4 @@ setWeatherData();
 setWeatherData();
 
 // update the weather every 5 minutes (1 while in dev)
-setInterval(setWeatherData, 1*60*1000);
+setInterval(setWeatherData, 5*60*1000);

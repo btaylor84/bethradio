@@ -81,9 +81,9 @@ div#current {
 
 div#now {
     position: absolute;
-    left: 260px;
+    left: 240px;
     top: 100px;
-    width: 180px;
+    width: 200px;
     height: 100px;
 }
 

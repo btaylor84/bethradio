@@ -15,7 +15,19 @@ let mainWindow;
 
 function createWindow () {
   // Create the browser window.
-  mainWindow = new BrowserWindow({width: 760, height: 460, frame: false});
+  mainWindow = new BrowserWindow({
+	width: 800, 
+	height: 480, 
+	frame: false,
+	x: 0,
+	y: 0,
+	resizable: false,
+	fullscreen: true,
+	skipTaskbar: true,
+	title: 'Beth Radio',
+	disableAutoHideCursor: true,
+	backgroundColor: '#FFF',
+});
 
   // and load the index.html of the app.
   mainWindow.loadURL('file://' + __dirname + '/index.html');
