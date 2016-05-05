@@ -31,6 +31,7 @@ div#volup, div#pause-play, div#voldn {
     color: #336699;
     text-align: center;
     width: 180px;
+    text-shadow: black 2px 2px 6px;
 }
 
 
@@ -58,7 +59,7 @@ div.clock {
     top: 0 px;
 }
 
-pressed {
+.pressed {
     color: #d35147;
 }
 
