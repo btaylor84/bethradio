@@ -33,9 +33,9 @@
     <span class="temp" v-text="temp"></span><span class="temp">&deg;</span>
   </div>
   <div id="current">
-    <p id="summary"><span v-text="summary"></span></p>
-    <p id="nextHour"><br>Next Hour:<br><span v-text="hourSummary"></span></p>
-    <p id="nextDay"><br>Next 24 Hours:<br><span v-text="daySummary"></span></p>
+    <p id="summary"><span v-text="summary"></span><br/></p>
+    <p id="nextHour"><br/>Next Hour:<br><span v-text="hourSummary"></span></p>
+    <p id="nextDay"><br/>Next 24 Hours:<br><span v-text="daySummary"></span></p>
   </div>
   <div id="week">
     <table id="weekTable" style="table-layout: fixed; width:100%">
@@ -48,11 +48,15 @@
      </tr>
     </table>
 </div>
-      
+
+<script>
+	// hide scroll bars. just to make the radio cleaner.
+	document.documentElement.style.overflow = 'hidden';
+</script>      
   
-  
+<script type='text/javascript' src='vue.js'></script>
 <script type='text/javascript' src='mrcl_kk_ghost.js'></script>
-<script type='text/javascript' src='http://animaclock.com/animaclock.js'></script>
+<script type='text/javascript' src='animaclock.js'></script>
 <script type='text/javascript'>
 new embedAnimaClock("myAnimaClockDiv53912", width=400, height=100, mrcl_kk_ghost, is24hr = 0, updateInterval = 25, setTitle = false);
 </script>

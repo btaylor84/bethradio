@@ -1,5 +1,7 @@
 'use strict';
 
+var config = require("./config");
+
 const local_lat = '38.6337567';
 const local_lng = '-90.374482';
 const APIKey = config.APIKey;       // key from forecast.io
@@ -96,9 +98,9 @@ function setWeatherData () {
             skycons.set("icon",body.currently.icon); 
             
             // make those canvases dance
-                skycons.play();
-                daycons.play();
-            
+            //    skycons.play();
+            //    daycons.play();
+            // commented out for possible improvement of resources
         }    
     );
 }
@@ -111,4 +113,4 @@ setWeatherData();
 setWeatherData();
 
 // update the weather every 5 minutes (1 while in dev)
-setInterval(setWeatherData, 1*60*1000);
+setInterval(setWeatherData, 5*60*1000);
