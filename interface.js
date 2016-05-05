@@ -29,6 +29,11 @@ function startup() {
     el = document.getElementsByClassName("clock")[0];
     el.addEventListener("click",(evt) => evt.preventDefault() , false);
     
+    // start the radio at less than full volume
+    el = document.getElementById("player");
+    el.volume = 0.7 ;
+    
+       
 }
 
 function pauseHandleStart (evt) {
@@ -95,5 +100,9 @@ function voldnHandleEnd (evt) {
     let el = document.getElementById("#voldn");
     el.classNames -= "pressed";
 }
+
+
+// shhh, a little quiet to startup
+
 
 startup();

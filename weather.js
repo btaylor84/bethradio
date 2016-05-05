@@ -2,9 +2,9 @@
 
 var config = require("./config");
 
-const local_lat = '38.6337567';
-const local_lng = '-90.374482';
 const APIKey = config.APIKey;       // key from forecast.io
+const local_lat = config.local_lat;
+const local_lng = config.local_lng;
 
 var Forecast = require('forecast.io');
 var request = require('request');
@@ -98,8 +98,8 @@ function setWeatherData () {
             skycons.set("icon",body.currently.icon); 
             
             // make those canvases dance
-            //    skycons.play();
-            //    daycons.play();
+                skycons.play();
+                daycons.play();
             // commented out for possible improvement of resources
         }    
     );

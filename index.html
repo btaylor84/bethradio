@@ -24,7 +24,12 @@
 </div>
 
 <div class="clock">
-  <div id='myAnimaClockDiv53912'></div>
+  <div id="date">{{ day }}, {{ month }} {{ date }}</div>    
+  <ul>
+      <li id="hours">{{ hours }}</li>
+      <li id="point">:</li>
+      <li id="mins">{{ mins }}</li>
+  </ul>
 </div>
   
 <div class="weather">
@@ -55,12 +60,7 @@
 </script>      
   
 <script type='text/javascript' src='vue.js'></script>
-<script type='text/javascript' src='mrcl_kk_ghost.js'></script>
-<script type='text/javascript' src='animaclock.js'></script>
-<script type='text/javascript'>
-new embedAnimaClock("myAnimaClockDiv53912", width=400, height=100, mrcl_kk_ghost, is24hr = 0, 
-	updateInterval = 200, setTitle = false);
-</script>
+<script src="./clock.js"></script>
 <script src="./interface.js"></script>
 <script src="./stream-data.js"></script>
 <script src="./skycons.js"></script>

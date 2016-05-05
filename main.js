@@ -18,16 +18,20 @@ function createWindow () {
   mainWindow = new BrowserWindow({
 	width: 800, 
 	height: 480, 
-	frame: false,
-	x: 0,
-	y: 0,
-	resizable: false,
-	fullscreen: true,
 	skipTaskbar: true,
 	title: 'Beth Radio',
 	disableAutoHideCursor: true,
 	backgroundColor: '#FFF',
+// Comment out below here for debugging-style window
+  
+//  frame: false,
+//	x: 0,
+//	y: 0,
+//	resizable: false,
+//	fullscreen: true,
+
 });
+
 
   // and load the index.html of the app.
   mainWindow.loadURL('file://' + __dirname + '/index.html');
