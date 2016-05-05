@@ -70,10 +70,11 @@ div.weather {
 
 div#current {
     position: absolute;
-    display: flex;
+/*    display: flex;
     flex-direction: row;
     align-items: center;
     flex-wrap: wrap;
+*/
     left: 480px;
     width: 320px;
     top: 12px;

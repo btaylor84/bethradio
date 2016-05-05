@@ -56,11 +56,8 @@ function pauseHandleEnd (evt) {
 function volupHandleClick (evt) {
     let player = document.getElementById("player");
     evt.preventDefault();
-    let el = document.getElementById("#volup");
-    el.classNames += "pressed";
     // player.volume = _.min([1.0, player.volume * 1.1]);    
     player.volume = _.min([1.0, player.volume + 0.1]);
-    setInterval( () => e1.classNames -= "pressed", 500);   
 }
 
 function volupHandleStart (evt) {
